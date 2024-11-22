@@ -7,27 +7,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
-        h2 {
-            color: #4CAF50;
-            text-align: center;
-        }
         .container {
             width: 90%;
             max-width: 600px;
             background-color: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         label {
             font-weight: bold;
@@ -36,9 +37,10 @@
         }
         input[type="text"] {
             width: 100%;
-            padding: 8px;
+            padding: 5px;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 5px;
+            font-size: 14px;
         }
         button[type="submit"] {
             width: 100%;
@@ -47,7 +49,7 @@
             padding: 10px;
             font-size: 16px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
         }
         button[type="submit"]:hover {
@@ -56,54 +58,54 @@
         .result {
             margin-top: 20px;
             font-size: 18px;
-            color: #4CAF50;
+            color: #333;
             text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Breast Cancer Prediction</h2>
+        <h1>Breast Cancer Prediction</h1>
         <form action="/predict" method="post">
             <div class="form-group">
                 <label for="mean_radius">Mean Radius:</label>
-                <input type="text" name="mean_radius" required>
+                <input type="text" id="mean_radius" name="mean_radius" required>
             </div>
             <div class="form-group">
                 <label for="mean_texture">Mean Texture:</label>
-                <input type="text" name="mean_texture" required>
+                <input type="text" id="mean_texture" name="mean_texture" required>
             </div>
             <div class="form-group">
                 <label for="mean_perimeter">Mean Perimeter:</label>
-                <input type="text" name="mean_perimeter" required>
+                <input type="text" id="mean_perimeter" name="mean_perimeter" required>
             </div>
             <div class="form-group">
                 <label for="mean_area">Mean Area:</label>
-                <input type="text" name="mean_area" required>
+                <input type="text" id="mean_area" name="mean_area" required>
             </div>
             <div class="form-group">
                 <label for="mean_smoothness">Mean Smoothness:</label>
-                <input type="text" name="mean_smoothness" required>
+                <input type="text" id="mean_smoothness" name="mean_smoothness" required>
             </div>
             <div class="form-group">
                 <label for="mean_compactness">Mean Compactness:</label>
-                <input type="text" name="mean_compactness" required>
+                <input type="text" id="mean_compactness" name="mean_compactness" required>
             </div>
             <div class="form-group">
                 <label for="mean_concavity">Mean Concavity:</label>
-                <input type="text" name="mean_concavity" required>
+                <input type="text" id="mean_concavity" name="mean_concavity" required>
             </div>
             <div class="form-group">
                 <label for="mean_concave_points">Mean Concave Points:</label>
-                <input type="text" name="mean_concave_points" required>
+                <input type="text" id="mean_concave_points" name="mean_concave_points" required>
             </div>
             <div class="form-group">
                 <label for="mean_symmetry">Mean Symmetry:</label>
-                <input type="text" name="mean_symmetry" required>
+                <input type="text" id="mean_symmetry" name="mean_symmetry" required>
             </div>
             <div class="form-group">
                 <label for="mean_fractal_dimension">Mean Fractal Dimension:</label>
-                <input type="text" name="mean_fractal_dimension" required>
+                <input type="text" id="mean_fractal_dimension" name="mean_fractal_dimension" required>
             </div>
             <button type="submit">Predict</button>
         </form>
